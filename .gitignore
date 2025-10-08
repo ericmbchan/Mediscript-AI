@@ -7,5 +7,5 @@ __pycache__/
 backend/venv/
 
 # Environment variables
-backend/.env
+#backend/.env
 #.\backend\.env
