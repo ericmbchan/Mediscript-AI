@@ -11,6 +11,8 @@ Back end: Python with Flask
 AI service: OpenAI API, Cursor AI
 Docker
 
+<img width="1753" height="796" alt="image" src="https://github.com/user-attachments/assets/9559c187-8752-4ff2-9004-93d2744e4a1f" />
+
 Features:
   -Input section with free text area
   -Output section using LLM integration to generate clinical summary
