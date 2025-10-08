@@ -8,3 +8,4 @@ backend/venv/
 
 # Environment variables
 backend/.env
+#.\backend\.env
