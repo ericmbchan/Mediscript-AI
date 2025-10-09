@@ -37,7 +37,7 @@ class MediScriptApp {
 
     async checkApiHealth() {
         try {
-            const response = await fetch('/api/health');
+            const response = await fetch('https://mediscript-ai.onrender.com/api/health');
             if (response.ok) {
                 console.log('✅ API is healthy');
             } else {
@@ -62,7 +62,7 @@ class MediScriptApp {
         this.copyBtn.disabled = true;
 
         try {
-            const response = await fetch('/api/generate', {
+            const response = await fetch('https://mediscript-ai.onrender.com/api/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
