@@ -132,6 +132,16 @@ class MediScriptApp {
         }, 5000);
     }
 
+    showInfo(message) {
+    this.outputContent.innerHTML = `
+        <div class="info-message fade-in">
+            <i class="fas fa-info-circle" style="color: #3b82f6; margin-right: 10px;"></i>
+            ${message}
+        </div>
+    `;
+    this.copyBtn.disabled = true;
+}
+
     showLoading(show) {
         if (show) {
             this.loading.classList.remove('hidden');
