@@ -61,7 +61,34 @@ class MediScriptApp {
         this.generateBtn.disabled = true;
         this.copyBtn.disabled = true;
 
+        // First, check if the API is responsive
         try {
+            this.showInfo('Connecting to server... (may take up to 30 seconds on first request)');
+            const healthCheck = await fetch('https://mediscript-ai.onrender.com/api/health');
+            if (!healthCheck.ok) {
+                throw new Error('API is starting up');
+            }
+        } catch (error) {
+            // Wait 5 seconds and try the health check again
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            try {
+                const secondCheck = await fetch('https://mediscript-ai.onrender.com/api/health');
+                if (!secondCheck.ok) {
+                    this.showError('Server is still starting up. Please wait a moment and try again.');
+                    this.showLoading(false);
+                    this.generateBtn.disabled = false;
+                    return;
+                }
+            } catch (error) {
+                this.showError('Unable to connect to server. Please try again in a moment.');
+                this.showLoading(false);
+                this.generateBtn.disabled = false;
+                return;
+            }
+        }
+
+        try {
+            this.showInfo('Generating documentation...');
             const response = await fetch('https://mediscript-ai.onrender.com/api/generate', {
                 method: 'POST',
                 headers: {
