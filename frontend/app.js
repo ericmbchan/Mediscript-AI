@@ -4,6 +4,9 @@ class MediScriptApp {
         this.initializeElements();
         this.bindEvents();
         this.checkApiHealth();
+        this.generateDocumentation = this.generateDocumentation.bind(this);
+        this.clearAll = this.clearAll.bind(this);
+        this.copyToClipboard = this.copyToClipboard.bind(this);
     }
 
     initializeElements() {
