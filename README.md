@@ -12,7 +12,7 @@ AI service: OpenAI API, Cursor AI, Github Copilot, Claude Sonnet 3.5
 
 Deployment tools:
 - front end: GitHub pages
-- back end: Render
+- back end: Render https://mediscript-ai.onrender.com/
 
 <img width="1753" height="796" alt="image" src="https://github.com/user-attachments/assets/9559c187-8752-4ff2-9004-93d2744e4a1f" />
 
