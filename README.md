@@ -8,7 +8,7 @@ Checkout the live application here: --> https://ericmbchan.github.io/Mediscript-
 Tech Stack
 Front end: HTML/CSS/JS
 Back end: Python with Flask
-AI service: OpenAI API, Cursor AI, Github Copilot, Claude Sonnet 3.5
+AI service: OpenAI API, Cursor AI, Github Copilot, Claude Sonnet 3.5, Windsurf
 
 Deployment tools:
 - front end: GitHub pages
@@ -18,7 +18,7 @@ Deployment tools:
 
 Features:
   - Input section with free text area
-  - Output section using LLM integration to generate clinical summary
+  - Output section using LLM integration (OpenAI's API) to generate clinical summary 
   - Loading spinner during AI processing
   - Copy button to copy results
   - Clear button to reset everything
